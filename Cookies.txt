@@ -1,0 +1,13 @@
+cookie manager : manages all cookies ie adding or deleting a cookie.
+
+    cookieMananger = new cookieManager();
+    cookieHandler.Setdefault(cookieMananger);
+
+CookieStore = stores and retrieves cookies.
+cookieStore cookieStore = cookieManager.getCookieStore();
+
+Cookie Policy:
+1. CookiePolicy.ACCEPT_ORIGINAL_SERVER
+2. CookiePolicy.ACCEPT_ALL
+3. CookiePolicy.REJECT_ALL
+

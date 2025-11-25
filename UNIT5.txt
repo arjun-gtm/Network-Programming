@@ -1,0 +1,13 @@
+URL connection
+- URL connection class allows a server to communicate over the internet usign HTTP,HTTPS or other protocols.
+- It is an abstract class that represents an active connection to a resource specified by a URL.
+
+Opening URL connection
+1. Create an URL object.
+2. Invoke the URL connection method.
+3. Configure the URL connection.
+4. Read the header fields.
+5. Get an input stream to read data.
+6. Get an output stream to write data.
+7. Close the connection.
+

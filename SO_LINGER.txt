@@ -1,0 +1,19 @@
+1.No SO_LINGER -> closes connection immediately and tries to send some data if possible.
+2.Set SO_LINGER(true,second)-> specifies time to send the ramaining  data.
+3.Set SO_LINGER(true, 0) :- closes connection immediately and no remaining data is sent.
+
+*****SO_TIMEOUT*****
+1. SO_TIMEOUT = 0
+2. Set SO_TIMEOUT(milliseconds)
+
+*****SO_REMINDER*****
+When a connection closes, the port remainins busy for sometime so as to prevent data mixing.
+SO_BINDADDR allows us to use that port.
+
+*****SO_SNDBVF*****
+    -send buffer
+    -It controls the size of the sending buffer.
+    -A largest buffer is used for file transfer, video streaming etc.
+    -A small buffer removes congestion.
+
+        

@@ -1,0 +1,47 @@
+--------------------------(host & port two arguments for Socket)---------------------------
+
+
+Picking a local interface to connect from:
+
+Java provides a way of specifying:
+1. Local interface, local port to connect from.
+2. Remote interface (host), remote port to connect to.
+
+This is used when a specific device has two or more than two interface routers.(Eg. routers- has two ethernet ports)
+
+Constructor Syntax:
+
+public Socket(InetAddress host, int port, InetAddress localAddr, int localPort)
+
+*******Constructing without connecting**********
+- We can construct a socket initially and then connect later according to our need.
+- This helps in flexible socket management.
+  Example:
+  Socket socket = new Socket();
+  SocketAddress address = new InetSocketAddress("host",port);
+  Socket.connect(address);
+
+*********Socket Address**********
+1. Retrieving SocketAddress
+   Constructors:
+   public SocketAddress getRemoteSocketAddress; -----> returns the remote system address.
+   public SocketAddress getLocalSocketAddress; -----> returns the local machine's address.
+   
+2. Connecting to a server
+   Socket socket = new Socket();
+   SocketAddress yahoo = new InetSocketAddress("www.yahoo.com",po);
+   socket.close();
+
+   Socket socket2 = new Socket();
+   socket2.connect(yahoo);
+
+
+********Proxy Server***********
+   Bypassing proxy server:
+   Socket socket = new Socket(Proxy.NO_PROXY);
+
+   Types of proxy servers:
+1. Proxy.Types.Socks ----> used at the transport layer.
+2. Proxy.Types.HTTP ----> used at the application layer.
+3. Proxy.Types.DIRECT ----> no proxy, direct communication.
+
