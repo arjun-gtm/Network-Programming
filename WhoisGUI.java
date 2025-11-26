@@ -34,7 +34,6 @@ public class WhoisGUI extends JFrame {
         add(topPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
 
-        // FIX: ActionListener spelling corrected
         lookupButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,7 +63,6 @@ public class WhoisGUI extends JFrame {
                  InputStream input = socket.getInputStream();
                  BufferedReader reader = new BufferedReader(new InputStreamReader(input))) {
 
-                // FIX: Wrong syntax → getBytes() must be called on the string
                 output.write((query + "\r\n").getBytes());
                 output.flush();
 
