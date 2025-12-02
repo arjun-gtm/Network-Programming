@@ -1,0 +1,6 @@
+1. what is socket? how do you read from server with sockets.
+2. explain with appropriate example for writing to server with sockets.
+3. write about socket addresses and proxy servers.
+4. how can we get information about a socket, list its methods and explain.
+5. explain in details about socket options.
+6. write and explain showing connecting to Whoisserver.

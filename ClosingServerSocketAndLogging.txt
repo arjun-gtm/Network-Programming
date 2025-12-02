@@ -1,0 +1,51 @@
+Closing server sockets:
+when we are done with the serversocket,it is essential to close the socket socket so as to free up the port. when then program exits the serversocket closes itself but it is a good practice to close the socket explicitely.
+
+******Methods to close the socket.******
+1.  Using try___finally block:
+    serversocket server = null
+    try {
+        .....
+    } finally {
+        if(server != null) {
+            server.close();
+        }
+    }
+
+2.  Using no argument constructor:
+    serversocket server = new serversocket();
+    serversocket address = new InetSocketAddress(port);
+    server.bind(address);
+    server.close();
+
+    -To free up the port.
+    -To close the connection.
+
+    -To check socket state
+        isClose()
+        isBound()
+    
+************** LOGGING: What to log and how to log.**************
+-Servers often runs unattended for a ling period of time, making it necessary to log informations for tracking what happened during that interval of time.
+
+-Logging helps in debugging and resolve errors.
+
+Types:
+1. Audit logs: Logs every request, response, number of clients with their timestamps.
+2. Error logs: Logs errors.
+
+
+*****Logging Guidelines*****
+1. Error logs.
+2. Avoid debug logs in Production.
+3. Advanced logging system.
+
+
+*****Logging Levels*****
+1. LEVEL.SEVERE : Critical errors that needs attention.
+2. LEVEL.WARNING : Potential warnings.
+3. LEVEL.INFO : Informations.
+4. LEVEL.CONFIG : Configurations.
+5. LEVEL.FINE : Detailed logging.
+6. LEVEL.FINER : More detailed logging.
+7. LEVEL.FINEST : Most detailed logging.
